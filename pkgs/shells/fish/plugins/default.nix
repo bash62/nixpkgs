@@ -54,7 +54,9 @@ lib.makeScope newScope (self: with self; {
 
   tide = callPackage ./tide.nix { };
 
-  wakatime-fish = callPackage ./wakatime-fish.nix { };
+  wakatime-fish = callPackage ../wakatime-fish.nix { };
+
+  ghq-fish = callPackage ./ghq-fish.nix { };
 
   z = callPackage ./z.nix { };
 } // lib.optionalAttrs config.allowAliases {
